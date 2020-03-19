@@ -1,0 +1,5 @@
+- hosts: app
+  become: yes
+  user: root
+  roles:
+    - metricbeat

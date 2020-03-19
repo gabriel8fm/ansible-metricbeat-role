@@ -1,0 +1,5 @@
+- hosts: redis
+  become: yes
+  user: root
+  roles:
+    - metricbeat

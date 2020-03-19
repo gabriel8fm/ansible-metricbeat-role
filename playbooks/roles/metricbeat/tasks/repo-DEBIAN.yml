@@ -1,0 +1,20 @@
+---
+## Debian Family ##
+
+- name: Ensure dependency is installed (for Debian based system).
+  apt:
+    name: apt-transport-https
+    state: present
+
+- name: Add Elasticsearch apt key (for Debian based system.
+  apt_key:
+    url: https://artifacts.elastic.co/GPG-KEY-elasticsearch
+    id: 46095ACC8548582C1A2699A9D27D666CD88E42B4
+    state: present
+
+- name: Add Metricbeat repository (for Debian based system).
+  apt_repository:
+    filename: elastic.list
+    repo: 'deb https://artifacts.elastic.co/packages/{{ metricbeat_version }}/apt stable main'
+    state: present
+    update_cache: true

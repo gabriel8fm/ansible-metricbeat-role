@@ -1,0 +1,12 @@
+---
+- name: Copying Metricbeat configuration.
+  template:
+    src: metricbeat.yml.j2
+    dest: "/etc/metricbeat/metricbeat.yml"
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart metricbeat
+
+- name: Setting Up Metricbeat Modules
+  command: metricbeat setup

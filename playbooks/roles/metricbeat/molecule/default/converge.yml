@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include metricbeat"
+      include_role:
+        name: "metricbeat"

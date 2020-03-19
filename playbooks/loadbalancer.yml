@@ -1,0 +1,5 @@
+- hosts: loadbalancer
+  become: yes
+  user: root
+  roles:
+    - metricbeat

@@ -1,0 +1,2 @@
+---
+repo_url: "https://artifacts.elastic.co/packages/{{ filebeat_version }}/yum"

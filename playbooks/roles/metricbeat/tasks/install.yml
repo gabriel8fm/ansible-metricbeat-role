@@ -1,0 +1,10 @@
+---
+- name: Installing Metricbeat.
+  package:
+    name: metricbeat
+    state: present
+
+- name: Enable Metricbet Service.
+  service:
+    name: metricbeat
+    enabled: yes
